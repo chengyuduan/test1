@@ -5,10 +5,8 @@ import com.envesttest.test.metier.Post;
 import com.envesttest.test.metier.Topic;
 import com.envesttest.test.metier.Utilisateur;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+
 
 public class BD {
     //Initialiation de base de données
@@ -73,6 +71,7 @@ public class BD {
 
     public void updateUtilisateurId(int id, String mdpU) {
         Utilisateur u = listU.get(id);
+        u.setMdp(mdpU);
         listU.put(id, u);
     }
 
